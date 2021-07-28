@@ -5,6 +5,8 @@ if(process.env.NODE_ENV !=="production"){
 const express = require("express");
 const app = express();
 const fs = require("fs");
+app.use(express.static(__dirname + '/public'));
+
 
 const html = fs.readFileSync("index.html");
 
